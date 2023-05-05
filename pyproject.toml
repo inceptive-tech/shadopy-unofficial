@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "shadopy"
+version = "0.0.1"
+authors = [
+    { name = "David Gonçalves", email = "david@inceptive.tech" },
+]
+description = "Unofficial python cli for the Shadow cloud API"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+dependencies = [
+    "requests==2.30.0",
+    "pydantic==1.10.7"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/inceptive-tech/shadopy-unofficial"
+"Bug Tracker" = "https://github.com/inceptive-tech/shadopy-unofficial/issues"
