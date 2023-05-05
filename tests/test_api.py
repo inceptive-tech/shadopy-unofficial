@@ -30,6 +30,6 @@ _BLOCK_LIST_TEST0 = {"block_devices": [_BLOCK_TEST0]}
 class TestShadowCloudCli(TestCase):
     def test_get_block_list_nominal(self, _):
         api = ShadowCloudCli(HttpBasicConnexion("test", "test"))
-        result = api.get_block_list()
+        result = api.get_block_device_list()
         expected = BlockDevices(block_devices=[BlockDevice(**_BLOCK_TEST0)])
         self.assertEqual(expected, result)
