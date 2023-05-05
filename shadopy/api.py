@@ -35,6 +35,12 @@ class ShadowCloudCli:
         serialized_blocks = self._build_and_send_request(self.BLOCK_DEVICE_LIST_PATH, data)
         return BlockDevices.parse_obj(serialized_blocks.json())
 
+    def request_block_device(self, dc_label: str, size: int = None):
+        # TODO WIP
+        data = {"block_device": {"datacenter_label": dc_label}}
+        if size is not None:
+            data["block_device"]["size_gib"] = size
+
     def get_context_information(self) -> ContextInformation:
         serialized = self._build_and_send_request(self.CTX_INFORMATION_PATH, {}).json()
         user = UserInfo.parse_obj(serialized["user"])
