@@ -1,0 +1,4 @@
+requests==2.30.0
+pydantic==1.10.7
+flake8
+coverage
