@@ -7,3 +7,6 @@ coverage:
 	COVERAGE_FILE=.coverage.unittest coverage run --source=. -m unittest discover -s "./tests"
 	coverage combine
 	coverage html
+
+unittests:
+	python -m unittest discover -s ./tests -t ./tests
