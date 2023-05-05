@@ -23,3 +23,9 @@ class BlockDevice(BaseModel):
 
 class BlockDevices(BaseModel):
     block_devices: List[BlockDevice]
+
+
+class DataCenter(BaseModel):
+    name: str
+    areas: List[str]
+    label: str
