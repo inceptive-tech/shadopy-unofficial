@@ -31,7 +31,6 @@ class ShadowCloudCli:
         return s.send(prepped)
 
     def get_block_device_list(self, block_uuid_filters: List[str] = None) -> BlockDevices:
-        # todo use filters
         data = {} if block_uuid_filters is None else {"filters": [{"uuid": elt} for elt in block_uuid_filters]}
         serialized_blocks = self._build_and_send_request(self.BLOCK_DEVICE_LIST_PATH, data)
         return BlockDevices.parse_obj(serialized_blocks.json())
