@@ -14,6 +14,10 @@ class BaseConnexion:
 
 
 class HttpBasicConnexion(BaseConnexion):
+    """
+    https://en.wikipedia.org/wiki/Basic_access_authentication
+    uses ENV vars SPC_TEST_USER and SPC_TEST_PASS is no user/pass provided
+    """
 
     def __init__(self, user: str = None, password: str = None) -> None:
         super().__init__()
