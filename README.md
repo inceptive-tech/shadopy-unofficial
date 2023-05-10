@@ -15,16 +15,16 @@ BlockDevices(block_devices=[BlockDevice(allocated_on='2023-05-05T08:07:24.989Z',
 ```
 # TODOS
 
-- [ ] /api/block_device/request
 - [ ] /api/vm/request
   -  [ ] image == disk -> no ssh keys
-- [ ] /api/block_device/release
 - [ ] /api/vm/kill
-- [ ] /api/vm/list
+- [x] /api/vm/list
 - [x] /api/block_device/list
+- [x] /api/block_device/request
+- [x] /api/block_device/release
 - [x] /api/context/informations
 - [ ] /api/context/availabilities
-- [ ] /api/block_device/request
+- [ ] dry run mode
 - [ ] error handling
 - [ ] packaging
 - [ ] pypi
