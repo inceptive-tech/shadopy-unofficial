@@ -60,3 +60,33 @@ class ContextInformation(BaseModel):
     datacenters: List[DataCenter]
     user: UserInfo
     skus: List[SkuInfo]
+
+
+class VMBlockDevice(BaseModel):
+    uuid: str
+
+
+class VM(BaseModel):
+    affected_on: str
+    block_devices: List[VMBlockDevice]
+    datacenter_label: Optional[str]
+    id: Optional[int]
+    image: str
+    inserted_on: str
+    kill_requested_on: Optional[str]
+    launch_bash_script: str
+    max_uptime: int
+    request_timeout: int
+    started_on: Optional[str]
+    status: int
+    status_str: str
+    uptime: int
+    uuid: str
+    vm_core: int
+    vm_cost: int
+    vm_gpu: int
+    vm_public_ipv4: Optional[str]
+    vm_public_sshport: Optional[int]
+    vm_ram: int
+    vm_sku: str
+    vnc: bool
