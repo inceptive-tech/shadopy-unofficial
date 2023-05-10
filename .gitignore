@@ -1,3 +1,5 @@
 /html/*
 .coverage
 /.idea/*
+/build/*
+/shadopy.egg-info/*
