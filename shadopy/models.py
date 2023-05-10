@@ -8,16 +8,16 @@ from pydantic import BaseModel
 
 
 class BlockDevice(BaseModel):
-    allocated_on: str
+    allocated_on: Optional[str]
     cost: int
-    datacenter_label: str
-    id: str
-    inserted_on: str
-    mounted: bool  # named 'mount' in doc
+    datacenter_label: Optional[str]
+    id: Optional[str]
+    inserted_on: Optional[str]
+    mounted: Optional[bool]  # named 'mount' in doc
     released_on: Optional[str]
     size_gib: int
-    status: int
-    status_str: str
+    status: Optional[int]
+    status_str: Optional[str]
     uuid: str
 
 
