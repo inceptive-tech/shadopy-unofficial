@@ -9,7 +9,7 @@ authors = [
 ]
 description = "Unofficial python cli for the Shadow cloud API"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -17,7 +17,7 @@ classifiers = [
 
 dependencies = [
     "requests==2.30.0",
-    "pydantic==1.10.7"
+    "pydantic>=1.10.2"
 ]
 
 [project.urls]
