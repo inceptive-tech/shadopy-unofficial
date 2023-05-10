@@ -15,9 +15,9 @@ BlockDevices(block_devices=[BlockDevice(allocated_on='2023-05-05T08:07:24.989Z',
 ```
 # TODOS
 
-- [ ] /api/vm/request
+- [x] /api/vm/request
   -  [ ] image == disk -> no ssh keys
-- [ ] /api/vm/kill
+- [x] /api/vm/kill
 - [x] /api/vm/list
 - [x] /api/block_device/list
 - [x] /api/block_device/request
