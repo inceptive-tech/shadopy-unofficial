@@ -13,7 +13,7 @@ from shadopy.models import BlockDevices, ContextInformation, UserInfo, DataCente
 
 class ShadowCloudCli:
     """wrapps the shadow cloud public APIs"""
-    BASE_URL = "https://api.shdw-ws.fr"
+    BASE_URL = "https://spot-computing.eu.shadow.tech/api/"
     BLOCK_DEVICE_LIST_PATH = "/api/block_device/list"
     BLOCK_DEVICE_REQ_PATH = "/api/block_device/request"
     BLOCK_DEVICE_RELEASE_PATH = "/api/block_device/release"
