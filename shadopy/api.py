@@ -2,7 +2,7 @@
     Main API calls implementation
     David G. - Inceptive - 2023
 """
-from typing import List
+from typing import List, Optional
 from urllib.parse import urljoin
 
 from requests import Request, Session
@@ -75,7 +75,7 @@ class ShadowCloudCli:
 
     def request_vm(self, sku: str = None, image: str = None, pubkeys: List[str] = None,
                    core: int = None, ram: int = None, gpu: int = None, blocks: List[str] = None,
-                   launch_script: str = None):
+                   launch_script: str = None, interruptible: Optional[bool] = None):
         data = {"dry_run": False, "vm": {}}
         if sku is not None:
             data["vm"]["sku"] = sku
@@ -93,6 +93,8 @@ class ShadowCloudCli:
             data["vm"]["block_devices"] = [{"uuid": elt} for elt in blocks]
         if launch_script is not None:
             data["vm"]["launch_bash_script"] = launch_script
+        if interruptible is not None:
+            data["vm"]["interruptible"] = interruptible
         resp = self._build_and_send_request(self.VM_REQ_PATH, data)
         assert resp.status_code == 200
         serialized = resp.json()
